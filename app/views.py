@@ -7,8 +7,7 @@ from django.db.models import ObjectDoesNotExist
 def index(request):
     if request.user.is_anonymous:
         return redirect("/login.html")
-    context = {}
-    return render(request, "index.html", context=context)
+    return html(request, "index")
 
 
 def html(request, filename):
